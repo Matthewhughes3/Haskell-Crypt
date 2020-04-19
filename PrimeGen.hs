@@ -15,7 +15,7 @@ getPrime bits gen = let (r,_) = head $ dropWhile (\(num,bool) -> not bool) $ map
 
 decToBits :: Integer -> [Bool]
 decToBits n = map odd powers
-                where powers = takeWhile (>0) $ map (\x -> n `div` 2^x) [0..]
+              where powers = takeWhile (>0) $ map (\x -> n `div` 2^x) [0..]
 
 -- Right-to-left binary modular exponentiation
 -- This is necessary for very large numbers
